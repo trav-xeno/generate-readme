@@ -1,0 +1,27 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "An awesome read me generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trav-xeno/readme-generator.git"
+  },
+  "author": "Travis Nevins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trav-xeno/readme-generator/issues"
+  },
+  "homepage": "https://github.com/trav-xeno/readme-generator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "gh-badges": "^2.2.1",
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.6"
+  }
+}
