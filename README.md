@@ -2,7 +2,7 @@
 
 This is a NodeJS read me generator.
 The easily readable code is in the demo.ts file. I coded this entire proejct in typescript.
-The code isn't the cleanest I ahve done and some areas are a bit brute forcing style vs efficient.
+The code isn't the cleanest I have done and some areas are a bit brute forced style vs efficient.
 
 # Vitdeo
 
