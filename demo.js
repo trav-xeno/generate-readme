@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var fs_1 = require("fs");
+var chalk = require("chalk");
 var axios_1 = require("axios");
 var inq = require("inquirer");
 var BadgeFactory = require("gh-badges").BadgeFactory;
@@ -128,13 +129,13 @@ var startingQuestions = function () {
         {
             type: "input",
             name: "title",
-            message: "What is the name of teh projects?",
+            message: chalk.blue("What is the name of the projects? "),
             validate: checkInput
         },
         {
             type: "input",
             name: "username",
-            message: "Enter your username please:",
+            message: chalk.blue("Enter your username please: "),
             validate: testUser
         }
     ]);
@@ -146,12 +147,12 @@ var secondaryQuestoins = function () {
         {
             type: "confirm",
             name: "testing",
-            message: "Would you like a testing section?"
+            message: chalk.blue("Would you like a testing section?")
         },
         {
             type: "confirm",
             name: "contributing",
-            message: "Would you like a contributing section?"
+            message: chalk.blue("Would you like a contributing section?")
         }
     ]);
 };
@@ -167,42 +168,42 @@ var fromatingQuestoins = function (testing, contributing) { return __awaiter(voi
                     {
                         type: "input",
                         name: "description",
-                        message: "Add text to the description section:",
+                        message: chalk.blue("Add text to the description section:"),
                         validate: validate
                     },
                     {
                         type: "confirm",
                         name: "contents",
-                        message: "Would you like a table of contents?"
+                        message: chalk.blue("Would you like a table of contents?")
                     },
                     {
                         type: "input",
                         name: "installation",
-                        message: "Add text to the installation section:",
+                        message: chalk.blue("Add text to the installation section: "),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "useage",
-                        message: "Add text to the useage section:",
+                        message: chalk.blue("Add text to the useage section: "),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "license",
-                        message: "Add a license section:",
+                        message: chalk.blue("Add a license section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "contributing",
-                        message: "Add text to the contributing section:",
+                        message: chalk.blue("Add text to the contributing section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "testing",
-                        message: "Add text to the testing section :",
+                        message: chalk.blue("Add text to the testing section: "),
                         validate: validate
                     }
                 ])];
@@ -212,30 +213,30 @@ var fromatingQuestoins = function (testing, contributing) { return __awaiter(voi
                     {
                         type: "input",
                         name: "description",
-                        message: "Add text to the description section:",
+                        message: chalk.blue("Add text to the description section:"),
                         validate: validate
                     },
                     {
                         type: "confirm",
                         name: "contents",
-                        message: "Would you like a table of contents?"
+                        message: chalk.blue("Would you like a table of contents?")
                     },
                     {
                         type: "input",
                         name: "installation",
-                        message: "Add text to the installation section:",
+                        message: chalk.blue("Add text to the installation section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "useage",
-                        message: "Add text to the useage section:",
+                        message: chalk.blue("Add text to the useage section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "license",
-                        message: "Add a license section:",
+                        message: chalk.blue("Add a license section:"),
                         validate: validate
                     }
                 ])];
@@ -245,36 +246,36 @@ var fromatingQuestoins = function (testing, contributing) { return __awaiter(voi
                     {
                         type: "input",
                         name: "description",
-                        message: "Add text to the description section:",
+                        message: chalk.blue("Add text to the description section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "installation",
-                        message: "Add text to the installation section:",
+                        message: chalk.blue("Add text to the installation section:"),
                         validate: validate
                     },
                     {
                         type: "confirm",
                         name: "contents",
-                        message: "Would you like a table of contents?"
+                        message: chalk.blue("Would you like a table of contents?")
                     },
                     {
                         type: "input",
                         name: "useage",
-                        message: "Add text to the useage section:",
+                        message: chalk.blue("Add text to the useage section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "license",
-                        message: "Add a license:",
+                        message: chalk.blue("Add a license: "),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "testing",
-                        message: "Add text to the testing section :",
+                        message: chalk.blue("Add text to the testing section: "),
                         validate: validate
                     }
                 ])];
@@ -284,36 +285,36 @@ var fromatingQuestoins = function (testing, contributing) { return __awaiter(voi
                     {
                         type: "input",
                         name: "description",
-                        message: "Add text to the description section:",
+                        message: chalk.blue("Add text to the description section: "),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "installation",
-                        message: "Add text to the installation section:",
+                        message: chalk.blue("Add text to the installation section: "),
                         validate: validate
                     },
                     {
                         type: "confirm",
                         name: "contents",
-                        message: "Would you like a table of contents?"
+                        message: chalk.blue("Would you like a table of contents?")
                     },
                     {
                         type: "input",
                         name: "useage",
-                        message: "Add text to the useage section:",
+                        message: chalk.blue("Add text to the useage section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "license",
-                        message: "Add a license section:",
+                        message: chalk.blue("Add a license section:"),
                         validate: validate
                     },
                     {
                         type: "input",
                         name: "contributing",
-                        message: "Add text to the contributing section:",
+                        message: chalk.blue("Add text to the contributing section:"),
                         validate: validate
                     }
                 ])];
@@ -433,7 +434,7 @@ function writeToReadMe(data) {
                     return [3 /*break*/, 3];
                 case 2:
                     err_3 = _a.sent();
-                    console.log("There was an error while trying to create the readme!");
+                    console.log(chalk.red("There was an error while trying to create the readme!"));
                     console.log(err_3);
                     return [3 /*break*/, 3];
                 case 3: return [2 /*return*/];
@@ -487,7 +488,7 @@ function generate() {
                             {
                                 type: "input",
                                 name: "redoEmail",
-                                message: "Looks like email was either not public or Wwas not defined on github. Please Enter the email: ",
+                                message: chalk.blue("Looks like email was either not public or Wwas not defined on github. Please Enter the email: "),
                                 validate: checkInput
                             }
                         ])];

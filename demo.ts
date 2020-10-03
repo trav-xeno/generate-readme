@@ -1,4 +1,6 @@
 import { promises as fs } from "fs";
+import chalk  = require("chalk");
+
 import axios, {
   AxiosRequestConfig,
   AxiosPromise,
@@ -95,13 +97,13 @@ const startingQuestions = (): Promise<any> => {
     {
       type: "input",
       name: "title",
-      message: "What is the name of teh projects?",
+      message: chalk.blue("What is the name of the projects? "),
       validate: checkInput
     },
     {
       type: "input",
       name: "username",
-      message: "Enter your username please:",
+      message: chalk.blue("Enter your username please: "),
       validate: testUser
     }
   ]);
@@ -113,12 +115,12 @@ const secondaryQuestoins = (): Promise<any> => {
     {
       type: "confirm",
       name: "testing",
-      message: "Would you like a testing section?"
+      message: chalk.blue("Would you like a testing section?")
     },
     {
       type: "confirm",
       name: "contributing",
-      message: "Would you like a contributing section?"
+      message: chalk.blue("Would you like a contributing section?")
     }
   ]);
 };
@@ -136,42 +138,42 @@ const fromatingQuestoins = async (testing, contributing): Promise<any> => {
       {
         type: "input",
         name: "description",
-        message: "Add text to the description section:",
+        message: chalk.blue("Add text to the description section:"),
         validate: validate
       },
       {
         type: "confirm",
         name: "contents",
-        message: "Would you like a table of contents?"
+        message: chalk.blue("Would you like a table of contents?")
       },
       {
         type: "input",
         name: "installation",
-        message: "Add text to the installation section:",
+        message: chalk.blue( "Add text to the installation section: "),
         validate: validate
       },
       {
         type: "input",
         name: "useage",
-        message: "Add text to the useage section:",
+        message: chalk.blue("Add text to the useage section: "),
         validate: validate
       },
       {
         type: "input",
         name: "license",
-        message: "Add a license section:",
+        message: chalk.blue("Add a license section:"),
         validate: validate
       },
       {
         type: "input",
         name: "contributing",
-        message: "Add text to the contributing section:",
+        message: chalk.blue("Add text to the contributing section:"),
         validate: validate
       },
       {
         type: "input",
         name: "testing",
-        message: "Add text to the testing section :",
+        message: chalk.blue("Add text to the testing section: "),
         validate: validate
       }
     ]);
@@ -180,30 +182,30 @@ const fromatingQuestoins = async (testing, contributing): Promise<any> => {
       {
         type: "input",
         name: "description",
-        message: "Add text to the description section:",
+        message: chalk.blue("Add text to the description section:"),
         validate: validate
       },
       {
         type: "confirm",
         name: "contents",
-        message: "Would you like a table of contents?"
+        message: chalk.blue("Would you like a table of contents?")
       },
       {
         type: "input",
         name: "installation",
-        message: "Add text to the installation section:",
+        message: chalk.blue("Add text to the installation section:"),
         validate: validate
       },
       {
         type: "input",
         name: "useage",
-        message: "Add text to the useage section:",
+        message: chalk.blue("Add text to the useage section:"),
         validate: validate
       },
       {
         type: "input",
         name: "license",
-        message: "Add a license section:",
+        message: chalk.blue("Add a license section:"),
         validate: validate
       }
     ]);
@@ -212,36 +214,36 @@ const fromatingQuestoins = async (testing, contributing): Promise<any> => {
       {
         type: "input",
         name: "description",
-        message: "Add text to the description section:",
+        message: chalk.blue("Add text to the description section:"),
         validate: validate
       },
       {
         type: "input",
         name: "installation",
-        message: "Add text to the installation section:",
+        message: chalk.blue("Add text to the installation section:"),
         validate: validate
       },
       {
         type: "confirm",
         name: "contents",
-        message: "Would you like a table of contents?"
+        message: chalk.blue("Would you like a table of contents?")
       },
       {
         type: "input",
         name: "useage",
-        message: "Add text to the useage section:",
+        message: chalk.blue("Add text to the useage section:"),
         validate: validate
       },
       {
         type: "input",
         name: "license",
-        message: "Add a license:",
+        message: chalk.blue("Add a license: "),
         validate: validate
       },
       {
         type: "input",
         name: "testing",
-        message: "Add text to the testing section :",
+        message: chalk.blue("Add text to the testing section: "),
         validate: validate
       }
     ]);
@@ -250,37 +252,37 @@ const fromatingQuestoins = async (testing, contributing): Promise<any> => {
       {
         type: "input",
         name: "description",
-        message: "Add text to the description section:",
+        message: chalk.blue("Add text to the description section: "),
         validate: validate
       },
       {
         type: "input",
         name: "installation",
-        message: "Add text to the installation section:",
+        message: chalk.blue("Add text to the installation section: "),
         validate: validate
       },
       {
         type: "confirm",
         name: "contents",
-        message: "Would you like a table of contents?"
+        message: chalk.blue("Would you like a table of contents?")
       },
 
       {
         type: "input",
         name: "useage",
-        message: "Add text to the useage section:",
+        message: chalk.blue("Add text to the useage section:"),
         validate: validate
       },
       {
         type: "input",
         name: "license",
-        message: "Add a license section:",
+        message: chalk.blue("Add a license section:"),
         validate: validate
       },
       {
         type: "input",
         name: "contributing",
-        message: "Add text to the contributing section:",
+        message: chalk.blue("Add text to the contributing section:"),
         validate: validate
       }
     ]);
@@ -387,7 +389,7 @@ async function writeToReadMe(data) {
   try {
     await fs.writeFile("TESTME.md", data, "utf8");
   } catch (err) {
-    console.log(`There was an error while trying to create the readme!`);
+    console.log(chalk.red(`There was an error while trying to create the readme!`));
     console.log(err);
   }
 }
@@ -497,7 +499,7 @@ async function generate() {
           type: "input",
           name: "redoEmail",
           message:
-            "Looks like email was either not public or Wwas not defined on github. Please Enter the email: ",
+          chalk.blue("Looks like email was either not public or Wwas not defined on github. Please Enter the email: "),
           validate: checkInput
         }
       ]);
